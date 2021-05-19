@@ -14,7 +14,7 @@
 </body>
 </head>
 <html> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -81,6 +81,100 @@
 								};
 			
 			ajaxRequest(Settings); 
+			//$("#div2").remove();
+			
+            });
+			
+			});
+        </script>
+    </head>
+    <body>
+
+        <div id="div1">
+            <h2>18 Plus Vaccine Tracker for 04-05-2021</h2>
+		 
+        </div>
+		<div id="div2"></div>
+
+		<div id="div3"></div1>
+
+        <button>Click To get the list</button>
+		
+    </body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+		    var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + 1 + "&date=04-05-2021" ;
+			var setting = {
+								"url": Url,
+								"method": "GET",
+								"timeout": 0,
+								"crossDomain": true,
+								"headers": 
+								{
+										"accept":"application/json",
+										"Accept-Language": "hi_IN",
+										"Access-Control-Allow-Headers": "*",
+										"Access-Control-Allow-Origin": "*"
+								}
+						  };
+			$.ajax(setting).done();
+			
+            $("button").click(function () {
+			   $("#div2").text("Loading ...");
+			   
+			  
+					var play =  function play() {
+								var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
+								audio.play();
+								};
+								
+					var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + 95 + "&date=21-05-2021" ;
+					var setting = {
+										"url": Url,
+										"method": "GET",
+										"timeout": 0,
+										"crossDomain": true,
+										"headers": 
+										{
+											 //"accept":"application/json",
+											//"Accept-Language": "hi_IN",
+											//"Access-Control-Allow-Headers": "*",
+											//"Access-Control-Allow-Origin": "*"
+									    }
+						           };
+					
+				
+				
+				var ajaxRequest = function ajaxRequest (setting) 
+								{
+									
+										$.ajax(setting)
+										.done(function (response) 
+												{
+													  for (var i = 0; i < response.sessions.length; i++) 
+														{
+															if (response.sessions[i] && response.sessions[i].min_age_limit === 18) 
+																{
+																	console.log(response.sessions[i].district_name);
+																	play();
+																	$("#div3").append(response.sessions[i].district_name+"<br>");
+																	//break;
+																}
+														}
+												}
+											);
+									
+								};
+			
+			setInterval(function(){ajaxRequest(setting);},1800000);
+			
 			//$("#div2").remove();
 			
             });
