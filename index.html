@@ -103,7 +103,6 @@
     </body>
 </html>
  -->
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -135,7 +134,7 @@
 								audio.play();
 								};
 								
-					var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + 95 + "&date=21-05-2021" ;
+					var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + 95 + "&date=22-05-2021" ;
 					var setting = {
 										"url": Url,
 										"method": "GET",
@@ -160,7 +159,7 @@
 												{
 													  for (var i = 0; i < response.sessions.length; i++) 
 														{
-															if (response.sessions[i] && response.sessions[i].min_age_limit === 18) 
+															if (response.sessions[i] && response.sessions[i].min_age_limit === 18 || response.sessions[i] && response.sessions[i].min_age_limit === 45) 
 																{
 																	console.log(response.sessions[i].district_name);
 																	play();
@@ -173,7 +172,7 @@
 									
 								};
 			
-			setInterval(function(){ajaxRequest(setting);},1800000);
+			setInterval(function(){ajaxRequest(setting);},300000);
 			
 			//$("#div2").remove();
 			
