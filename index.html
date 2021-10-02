@@ -1,197 +1,31 @@
-<!-- <html>
-  <meta name="google-site-verification" content="1vNgqlwVrLQwjsXbQRJWZl7vK0BSB5jUwGAaC8rf5Lg" />
-<head>
-<body>
-<p style="padding-left: 360px;"><span style="font-size: 14pt; background-color: #e03e2d;">Hello World !</span></p>
-<p style="padding-left: 280px;"><span style="font-size: 14pt; background-color: #236fa1; color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; It's Kirti here !&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
-<p style="padding-left: 160px;"><span style="background-color: #2dc26b; font-size: 24pt; font-family: 'arial black', sans-serif;">&nbsp; &nbsp; Glad to see you on my githu repo.</span></p>
-<p style="padding-left: 160px;">&nbsp;</p>
-<p style="padding-left: 160px;"><span style="background-color: #2dc26b; font-size: 24pt; font-family: 'arial black', sans-serif;">Know more about me on<a title="LinkedIn" href="https://www.linkedin.com/in/kirti-kunal/"> Linkedin</a></span></p>
-<p style="padding-left: 160px;"><span style="background-color: #2dc26b; font-size: 24pt; font-family: 'arial black', sans-serif;"><a title="email" href="mailto:kirtikunal4@gmail.com">Email me</a>&nbsp;</span></p>
-<p style="padding-left: 280px;">&nbsp;</p>
-<p style="padding-left: 280px;">&nbsp;</p>
-<p style="padding-left: 280px;">&nbsp;</p>
-</body>
-</head>
-<html> -->
-<!-- <!DOCTYPE html>
-<html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-		    var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + 1 + "&date=04-05-2021" ;
-			var setting = {
-								"url": Url,
-								"method": "GET",
-								"timeout": 0,
-								"crossDomain": true,
-								"headers": 
-								{
-										"accept":"application/json",
-										"Accept-Language": "hi_IN",
-										"Access-Control-Allow-Headers": "*",
-										"Access-Control-Allow-Origin": "*"
-								}
-						  };
-			$.ajax(setting).done();
-			
-            $("button").click(function () {
-			   $("#div2").text("Loading ...");
-			   var Settings = [];
-			   for(var i = 1 ; i< 800; i++)
-			   {
-					var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + i + "&date=03-05-2021" ;
-					var setting = {
-										"url": Url,
-										"method": "GET",
-										"timeout": 0,
-										"crossDomain": true,
-										"headers": 
-										{
-											 //"accept":"application/json",
-											//"Accept-Language": "hi_IN",
-											//"Access-Control-Allow-Headers": "*",
-											//"Access-Control-Allow-Origin": "*"
-									    }
-						           };
-					Settings.push(setting);
-				}
-				
-				var ajaxRequest = function ajaxRequest (settings) 
-								{
-									if (settings.length > 0) 
-									{
-										$.ajax(settings.pop())
-										.done(function (response) 
-												{
-													  for (var i = 0; i < response.sessions.length; i++) 
-														{
-															if (response.sessions[i] && response.sessions[i].min_age_limit === 18) 
-																{
-																	console.log(response.sessions[i].district_name);
-																	$("#div3").append(response.sessions[i].district_name+"<br>");
-																	break;
-																}
-														}
-													 ajaxRequest(settings);
-												}
-											);
-									}
-								};
-			
-			ajaxRequest(Settings); 
-			//$("#div2").remove();
-			
-            });
-			
-			});
-        </script>
-    </head>
-    <body>
-
-        <div id="div1">
-            <h2>18 Plus Vaccine Tracker for 04-05-2021</h2>
-		 
-        </div>
-		<div id="div2"></div>
-
-		<div id="div3"></div1>
-
-        <button>Click To get the list</button>
-		
-    </body>
-</html>
- -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-		    var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + 1 + "&date=04-05-2021" ;
-			var setting = {
-								"url": Url,
-								"method": "GET",
-								"timeout": 0,
-								"crossDomain": true,
-								"headers": 
-								{
-										"accept":"application/json",
-										"Accept-Language": "hi_IN",
-										"Access-Control-Allow-Headers": "*",
-										"Access-Control-Allow-Origin": "*"
-								}
-						  };
-			$.ajax(setting).done();
-			
-            $("button").click(function () {
-			   $("#div2").text("Loading ...");
-			   
-			  
-					var play =  function play() {
-								var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
-								audio.play();
-								};
-								
-					var Url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=" + 95 + "&date=22-05-2021" ;
-					var setting = {
-										"url": Url,
-										"method": "GET",
-										"timeout": 0,
-										"crossDomain": true,
-										"headers": 
-										{
-											 //"accept":"application/json",
-											//"Accept-Language": "hi_IN",
-											//"Access-Control-Allow-Headers": "*",
-											//"Access-Control-Allow-Origin": "*"
-									    }
-						           };
-					
-				
-				
-				var ajaxRequest = function ajaxRequest (setting) 
-								{
-									
-										$.ajax(setting)
-										.done(function (response) 
-												{
-													  for (var i = 0; i < response.sessions.length; i++) 
-														{
-															if (response.sessions[i] && response.sessions[i].min_age_limit === 18 || response.sessions[i] && response.sessions[i].min_age_limit === 45) 
-																{
-																	console.log(response.sessions[i].district_name);
-																	play();
-																	$("#div3").append(response.sessions[i].district_name+"<br>");
-																	//break;
-																}
-														}
-												}
-											);
-									
-								};
-			
-			setInterval(function(){ajaxRequest(setting);},300000);
-			
-			//$("#div2").remove();
-			
-            });
-			
-			});
-        </script>
-    </head>
-    <body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-        <div id="div1">
-            <h2>18 Plus Vaccine Tracker for 04-05-2021</h2>
-		 
-        </div>
-		<div id="div2"></div>
+.bg {
+  /* The image used */
+  background-image: url("img_girl.jpg");
 
-		<div id="div3"></div1>
+  /* Full height */
+  height: 100%; 
 
-        <button>Click To get the list</button>
-		
-    </body>
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+
+</body>
 </html>
